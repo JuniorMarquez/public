@@ -44,12 +44,13 @@
           </div>
         </div>
       </div>
-          <div class="col-md-5 ">
+          <div class="col-md-4 ">
             <!-- <div class="single-service"> -->
              
               <h3 class="text-theme-colored">{{capacitacion.titulo}}</h3>
               <h5><em>{{capacitacion.subtitulo}}</em></h5>
               <p></p>
+              {{capacitacion.descripcion}}
               <p >
             <ul>
               <li  ng-repeat="item in itemsContenido">
@@ -57,41 +58,117 @@
               </li>
             </ul>
 
-
+              <!--  <h5><em>Duración:</em></h5>
+                {{capacitacion.duracion}} -->
+        <!--       </p>
+              <p> -->
+                 <h5><em>Observaciones:</em></h5>
+                {{capacitacion.observaciones}}
+                
+              </p>
               </p>
               <p>
                 
               <div class="row">
+           
+
+
+             <!--   <i class="glyphicon-hand-right text-theme-colored font-50"></i>
+               Realizar Depósito o Transferencia al Número de cuenta del Banco de su preferencia a nombre de Centro Educativo Capacitate C.A. 
               <br/>
-              <br/>
+              <p>
+              <i class="glyphicon-hand-right text-theme-colored font-50"></i>
+              Llenar formulario de inscripción en línea -->
+              
+              </p><br/>
              
               </div>
             
            <!--  </div> -->
           </div>
 
-          <div class="col-md-3 ">
+          <div class="col-md-4 ">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span class="label bg-danger pull-right m-t-xs"></span>
+          
+        </div>
+        <table class="table table-striped m-b-none">
+          <!-- <thead>
+            <tr>
+              <th>Fecha inicio</th>
+              <th>Fecha culminacion</th 
+            </tr>
+          </thead> -->
+          <tbody>
+            <tr>
+              <td>
+                <b>Fecha Inicio:</b>
+              </td>
+              <td>{{capacitacion.fechaIni}}</td>
+            </tr>
+            <tr>                    
+              <td>
+              <b>
+                Fecha Culminación:</b>
+              </td>
+              <td>{{capacitacion.fechaFin}}</td>
+            </tr>
+            <tr>                    
+              <td>
+              <b>
+               Duración:</b>
+              </td>
+              <td>{{capacitacion.duracion}}</td>
+            </tr>
+            <tr>                    
+              <td>
+                <b>Área:</b>
+              </td>
+              <td>{{capacitacion.area}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
            <!-- <h3 class="text-white">{{capacitacion.subtitulo}}</h3> -->
-           <h5><em>Duración:</em></h5>
-                {{capacitacion.duracion}}
-              </p>
-              <p>
-                 <h5><em>Observaciones:</em></h5>
-                {{capacitacion.observaciones}}
-              </p>
+          
 
            <div class="precio text-white"  style="background-image: url(images/priceLabel.png);height: 219px;;
            width: 281px;">
            <br/>
            <!-- <br/> -->
            <br/>
-           <span class="text-center"><h3><span class="text-white">Bs.F. {{capacitacion.inversion |number:0 }}</span></h3></span>
+           <span class="text-center"#/app/detalleCurso><h3><span class="text-white">Bs.F. {{capacitacion.inversion |number:0 }}</span></h3></span>
            <br/>
            <br/>
            <br/>
-           <button class="btn btn-primary2 btn-xl text-hite font-bold btn-block" ng-click="openInscripcion(capacitacion)">Inscripción</button> 
+           
            </div> 
+
+          </div>
+          <div class="col-md-8">
+          <h2>Pasos a seguir para la inscripción en el curso</h2>
+               <div class="icon-box p-15 mb-0 mb-sm-0 mt-sm-0">
+                       <h3>1.</h3>
+                      <div class="ml-50 ml-sm-0">
+                        <h4 class="icon-box-title mt-15 mb-5"></h4>
+                        <p> Realizar Depósito o Transferencia bancaria al Número de cuenta del Banco de su preferencia a nombre de <b> Centro Educativo Capacitate C.A.</b> </p>
+
+            <div class=""  style="background-image: url(images/bicentenario.jpg);height: 59px;width: 150px;">
+           </div> 
+           <div class=""  style="background-image: url(images/mercantil.jpg);height: 59px;width: 150px;">
+           </div> 
+                      </div>
+              </div>
+                <div class="icon-box p-15 mb-0 mb-sm-0 mt-sm-0">
+                      <h3>2.</h3>
+                      <div class="ml-50 ml-sm-0">
+                        <h4 class="icon-box-title mt-15 mb-5"></h4>
+                        <p>  Llenar <button class="btn btn-primary2 btn-xl text-hite font-bold " ng-click="openInscripcion(capacitacion)">Formulario de inscripción</button> en línea. </p>
+                      </div>
+              </div>
 
           </div>
           

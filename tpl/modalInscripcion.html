@@ -1,8 +1,8 @@
 <div class="modal-header" ng-init="consultaCapacitacionInscripcion()">
     <h3 class="modal-title">Inscripción<p>
    </p></h3>
-     <h5 ><p>
-    {{item.titulo}} {{item.inversion}} </p></h5>
+<!--      <h5 ><p>
+    {{item.titulo}} {{item.inversion}} </p></h5> -->
 
 </div>
 <div class="modal-body">
@@ -39,6 +39,7 @@
 
        <!--  <input type="select" name="url" placeholder="http://" class="form-control" ng-model="website" required> -->
         <div class="m-t m-b">
+            <button class="btn btn-default" ng-click="cancel()">Cancelar</button>
           <button type="submit" ng-disabled="step1.$invalid" class="btn btn-default btn-rounded" ng-click="steps.step2=true">Siguiente</button>
         </div>
       </form>
@@ -82,6 +83,7 @@
         <input type="text" name="institucionEmpresa" class="form-control" ng-model="item.institucionEmpresa"  ng-change="step1.text.$valid ? (steps.percent=50) : (steps.percent=60)">
 
         <div class="m-t m-b">
+            <button class="btn btn-default" ng-click="cancel()">Cancelar</button>
           <button type="button" class="btn btn-default btn-rounded" ng-click="steps.step1=true">Anterior</button>
           <button type="submit" ng-disabled="step2.$invalid" class="btn btn-default btn-rounded" ng-click="steps.step3=true">Siguiente</button>
         </div>
@@ -119,6 +121,7 @@
       </div>
 
        <div class="m-t m-b">
+           <button class="btn btn-default" ng-click="cancel()">Cancelar</button>
           <button type="button" class="btn btn-default btn-rounded" ng-click="steps.step2=true">Anterior</button>
           <button type="submit" ng-disabled="step3.$invalid" class="btn btn-default btn-rounded" ng-click="steps.step4=true">Siguiente</button>
         </div>
@@ -160,6 +163,7 @@
       </div>
 
       <div class="m-t m-b">
+          <button class="btn btn-default" ng-click="cancel()">Cancelar</button>
         <button type="button" class="btn btn-default btn-rounded" ng-click="steps.step3=true">Anterior</button>
         <button type="button" class="btn btn-default btn-rounded" ng-click="guardarInscripcion(item)">Finalizar</button>
       </div>
@@ -174,7 +178,7 @@
 
   </tabset>
  </div>
-<div class="modal-footer">                  
-    <button class="btn btn-default" ng-click="cancel()">Cancelar</button>
-    <!-- <button class="btn btn-primary" ng-click="okComite(item)">OK</button> -->
-</div>
+<!-- <div class="modal-footer">                  
+
+    <button class="btn btn-primary" ng-click="okComite(item)">OK</button>
+</div> -->
