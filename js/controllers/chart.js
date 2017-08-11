@@ -29,6 +29,39 @@ $scope.suscripcionFooter=function(item){
   $scope.popSuscripcion();
 };
 
+$scope.openPostulacion = function () {
+
+var dato="";
+      var datosCuenta="";
+      var item={};
+ // var identificador=item.id;
+ //    MyService.data.idenCapacitacionInscripcion = identificador;
+        var modalInstance = $modal.open({
+        templateUrl: 'modalPostulacion.html',
+        controller: 'ModalInstanceCtrl',
+        size: 'md',
+        resolve: {
+            dato: function  () {
+            return item;
+            // body...
+          },
+           datosCuenta: function  () {
+            return datosCuenta;
+            // body...
+          },
+          items: function () {
+            return $scope.items;
+          }
+        }
+      });
+    modalInstance.result.then(function (selectedItem) {
+      $scope.selected = selectedItem;
+    }, function () {
+      // $log.info('Modal dismissed at: ' + new Date());
+   });
+
+};
+
 
 $scope.congiguracion=[];
 $scope.vectorCapacitaciones=[];

@@ -52,7 +52,8 @@ angular.module('app')
                               function(){
                                   return $ocLazyLoad.load(['js/controllers/chart.js',
                                                   'js/controllers/bootstrap.js',
-                                                          'js/app/formacionCapacitacion/gridCursos.js']);
+                                                          'js/app/formacionCapacitacion/gridCursos.js',
+                                                          'js/controllers/file-upload.js']);
                               }
                           );
                       }]
